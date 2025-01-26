@@ -19,6 +19,14 @@ In this process, we'll automate the following stages:
 
 4. Pipeline: The entire process is managed and automated using AWS CodePipeline.
 
+Comparision between architecture of on-prem CI/CD and AWS CI/CD :
+
+![Screenshot_20250102-113538_YouTube](https://github.com/user-attachments/assets/3ec3c368-15cc-49b4-8f5e-b9ec76272d1b)
+
+
+![Screenshot_20250102-121142_YouTube](https://github.com/user-attachments/assets/7d896d5f-3343-481d-95f5-61af4acb8a18)
+
+
 
 
 ## Benefits of AWS CI/CD
