@@ -21,10 +21,12 @@ In this process, we'll automate the following stages:
 
 Comparision between architecture of on-prem CI/CD and AWS CI/CD :
 
-![Screenshot_20250102-113538_YouTube](https://github.com/user-attachments/assets/3ec3c368-15cc-49b4-8f5e-b9ec76272d1b)
+![image](https://github.com/user-attachments/assets/4c5d6c18-1ef4-4d24-b9f5-3fc797a3d48a)
 
 
-![Screenshot_20250102-121142_YouTube](https://github.com/user-attachments/assets/7d896d5f-3343-481d-95f5-61af4acb8a18)
+
+![image](https://github.com/user-attachments/assets/b5032fe2-f2d1-40c6-9e46-d162302e5f92)
+
 
 
 
