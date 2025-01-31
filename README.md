@@ -42,14 +42,14 @@ Consistency: Ensures that the same process is followed for every deployment, red
 
 ## CI/CD Process Workflow
 
-1. Source Code Repository - AWS CodeCommit
+## 1. Source Code Repository - AWS CodeCommit
 
 AWS CodeCommit is a source control service that allows you to store your source code securely.
 
 Developers push their code to CodeCommit, which triggers the CI/CD pipeline.
 
 
-2. Build Stage - AWS CodeBuild
+## 2. Build Stage - AWS CodeBuild
 
 AWS CodeBuild automatically builds and tests the code after each commit.
 
@@ -57,23 +57,23 @@ You define the build specifications in the buildspec.yml file in the root of you
 
 Example buildspec.yml:
 
-version: 0.2
-phases:
-  install:
-    runtime-versions:
-      java: openjdk11
-    commands:
-      - echo Installing dependencies...
-  build:
-    commands:
-      - echo Building the application...
-      - mvn clean install
-artifacts:
-  files:
-    - target/*.jar
+    version: 0.2
+    phases:
+      install:
+        runtime-versions:
+          java: openjdk11
+        commands:
+          - echo Installing dependencies...
+      build:
+        commands:
+          - echo Building the application...
+          - mvn clean install
+    artifacts:
+      files:
+        - target/*.jar
 
 
-3. Deploy Stage - AWS CodeDeploy
+## 3. Deploy Stage - AWS CodeDeploy
 
 AWS CodeDeploy automates the deployment of applications to Amazon EC2 instances, AWS Lambda, or on-premises servers.
 
@@ -83,19 +83,19 @@ CodeDeploy uses an AppSpec file to define deployment instructions.
 
 Example AppSpec.yml:
 
-version: 0.0
-os: linux
-files:
-  - source: /target/my-app.jar
-    destination: /home/ec2-user/my-app.jar
-hooks:
-  AfterInstall:
-    - location: scripts/install_dependencies.sh
-      timeout: 300
-      runas: root
+    version: 0.0
+    os: linux
+    files:
+      - source: /target/my-app.jar
+        destination: /home/ec2-user/my-app.jar
+    hooks:
+      AfterInstall:
+        - location: scripts/install_dependencies.sh
+          timeout: 300
+          runas: root
 
 
-4. Automation with AWS CodePipeline
+## 4. Automation with AWS CodePipeline
 
 AWS CodePipeline is the orchestration service that automates the CI/CD pipeline.
 
@@ -114,14 +114,14 @@ A sample pipeline consists of the following stages:
 
 
 
-5. Testing: Integration and Unit Tests
+## 5. Testing: Integration and Unit Tests
 
 In the build phase, you can also run unit tests and integration tests.
 
 CodeBuild can be configured to run unit tests using popular frameworks like JUnit, NUnit, or PyTest, depending on your application stack.
 
 
-6. Monitoring and Logging
+## 6. Monitoring and Logging
 
 AWS CloudWatch is used to monitor the performance of your application, infrastructure, and pipeline.
 
